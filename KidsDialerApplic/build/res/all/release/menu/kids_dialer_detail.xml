@@ -1,9 +1,0 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
-
-    <item
-        android:id="@+id/menu_contact_details"
-        android:orderInCategory="100"
-        android:showAsAction="never"
-        android:title="@string/action_contact_details"/>
-    
-</menu><!-- From: file:/C:/home/working/develop/eclipse/notifiers/KidsDialer/KidsDialerApplic/res/menu/kids_dialer_detail.xml -->

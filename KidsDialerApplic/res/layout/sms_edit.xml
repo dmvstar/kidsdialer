@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Spinner
+        android:id="@+id/spTemplateSMS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" 
+        />
+
+    <EditText
+        android:id="@+id/editTextSMS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btSendSMS"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/tvMyPhone"
+        
+        android:background="@color/color_transparent_20"
+        android:ems="10"
+        android:gravity="top|left"
+        android:inputType="textMultiLine"
+        android:textSize="24sp" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btCancelSMS"
+        style="@style/RectThemeButtonGreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:drawableRight="@drawable/button_back_72"
+        android:onClick="cancelSMS"
+        android:text="@string/button_cancel_sms" />
+
+    <Button
+        android:id="@+id/btSendSMS"
+        style="@style/RectThemeButtonYellow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btCancelSMS"
+        android:layout_alignParentLeft="true"
+        android:drawableRight="@drawable/button_sms_72"
+        android:onClick="sendSMS"
+        android:text="@string/button_send_sms" />
+
+    <TextView
+        android:id="@+id/tvMyPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/spTemplateSMS"
+        android:text="@string/sms_my_phone"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/Aqua" />
+
+</RelativeLayout>

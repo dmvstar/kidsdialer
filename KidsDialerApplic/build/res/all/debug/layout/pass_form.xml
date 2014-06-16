@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/lbAboutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/form_pass_enter"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/edit_text_pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberPassword" >
+
+        <requestFocus />
+    </EditText>
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/form_pass_show" />
+
+    <Button
+        android:id="@+id/button_check_pin"
+        style="@style/RectThemeButtonRed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/form_pass_button_check" />
+
+</LinearLayout><!-- From: file:/C:/home/working/develop/eclipse/notifiers/KidsDialer/KidsDialerApplic/res/layout/pass_form.xml -->

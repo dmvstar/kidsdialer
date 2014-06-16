@@ -1,0 +1,20 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/button_red_gradient_shape_focused"
+    android:shape="rectangle" >
+
+    <corners android:radius="12px" />
+
+    <gradient
+        android:angle="90"
+                android:endColor="#f41c07"
+                android:startColor="#f4a49c"
+        android:type="linear" />
+
+    <padding
+        android:bottom="7px"
+        android:left="4px"
+        android:right="4px"
+        android:top="7px" />
+    
+
+</shape>

@@ -1,0 +1,11 @@
+<resources>
+    <declare-styleable name="AppTheme">
+        <attr name="backgroungImage" format="reference" />
+    </declare-styleable>
+
+    <attr name="custButtonStyle" format="reference" />
+
+    <declare-styleable name="CustButton"></declare-styleable>
+
+
+</resources>

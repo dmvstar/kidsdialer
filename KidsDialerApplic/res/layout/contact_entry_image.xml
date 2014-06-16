@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayoutContact"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/custom_border_greeen"
+    android:gravity="center" >
+
+    <ImageView
+        android:id="@+id/contactImageIcon"
+        android:contentDescription="@+id/contactImageIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/custom_border_blue"
+        android:src="@drawable/cars_172_3" />
+
+    <TextView
+        android:id="@+id/contactEntryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/contactImageIcon"
+        android:layout_alignLeft="@+id/contactImageIcon"
+        android:layout_alignRight="@+id/contactImageIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="1dp"
+        android:gravity="center"
+        android:text="@+id/contactEntryText"
+        android:textColor="@color/Gold"
+        android:textSize="22sp" />
+    
+        <TextView
+            android:id="@+id/contactPhoneText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/contactImageIcon"
+            android:layout_alignRight="@+id/contactImageIcon"
+            android:layout_alignTop="@+id/contactImageIcon"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="1dp"
+            android:background="@color/color_transparent_20"
+            android:gravity="center"
+            android:text="@+id/contactPhoneText"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/BlanchedAlmond" />
+
+</RelativeLayout>

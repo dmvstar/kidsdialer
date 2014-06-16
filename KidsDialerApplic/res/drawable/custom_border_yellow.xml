@@ -1,0 +1,13 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:width="4dp" android:color="@color/Yellow" />
+    <padding android:left="7dp" android:top="7dp"
+            android:right="7dp" android:bottom="7dp" />
+    <corners android:radius="4dp" />
+    <solid android:color="#88000000" />
+</shape>
+
+<!--
+http://zaman91.wordpress.com/2010/12/30/android-how-to-create-rounded-border-or-background/
+http://stackoverflow.com/questions/5254562/is-there-a-simpler-better-way-to-put-a-border-outline-around-my-textview
+
+-->

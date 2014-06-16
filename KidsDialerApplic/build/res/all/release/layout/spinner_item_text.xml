@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textViewSpinnerItem"
+    style="@style/SpinnerTextViewItem"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:contentDescription="@+id/textViewSpinnerItem"
+    android:scrollHorizontally="false"
+    android:text="@+id/textViewSpinnerItem"
+    android:textSize="20sp" />
+
+<!-- From: file:/C:/home/working/develop/eclipse/notifiers/KidsDialer/KidsDialerApplic/res/layout/spinner_item_text.xml -->

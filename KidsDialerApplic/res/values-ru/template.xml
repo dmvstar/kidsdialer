@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string-array name="sms_template_key">
+        <item>Перезвоните мне !</item>
+        <item>Иду домой</item>
+        <item>Я занят, перезвоню</item>
+        <item>Я пошел гулять, перезвоню</item>
+	</string-array>
+
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="KidsDialer" default="help">
+
+    <import file="build.xml" />
+    <import file="../common.xml" />
+
+    <target name="getversion">
+	<loadfile srcfile="AndroidManifest.xml" property="appversion">
+		<filterchain>
+			<linecontains>
+				<contains value="android:versionName"/>
+			</linecontains>
+			<striplinebreaks/>
+
+			<tokenfilter>
+				<replaceregex pattern="[^0-9.]+" replace="" flags="gim"/>
+			</tokenfilter>
+
+		</filterchain>
+	</loadfile>
+    </target>
+
+    <target name="-set-vdebug-files" depends="-set-mode-check,getversion">
+        <property name="out.packaged.file" 	location="${out.absolute.dir}/${ant.project.name}-v.${appversion}-debug-unaligned.apk" />
+        <property name="out.final.file" 	location="${out.absolute.dir}/${ant.project.name}-v.${appversion}.apk" />
+        <property name="build.is.mode.set" 	value="true" />
+    </target>
+	
+
+
+
+    <!-- Builds debug output package -->
+    <target name="mdebug" depends="-set-vdebug-files, -do-debug, -post-build" description="Builds the application and signs it with a debug key.">
+            <echo level="info">Running make ... ${appversion}</echo>
+    </target>
+
+    <target name="clean">
+            <echo level="info">Cleaning up temporary files...</echo>
+            <delete>
+            	<fileset dir="${out.absolute.dir}" includes="*ap_*,*unaligned* "/>
+            </delete>
+    </target>
+
+    <target name="debug" depends="mdebug,clean" description="Builds the application and signs it with a debug key.">
+    </target>
+	
+
+</project>
+	

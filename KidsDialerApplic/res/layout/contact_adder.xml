@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/targetAccountLabel" />
+        </TableRow>
+
+        <TableRow>
+
+            <Spinner
+                android:id="@+id/accountSpinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contactNameLabel" />
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/contactNameEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contactImageLabel" />
+        </TableRow>
+
+        <TableRow android:layout_gravity="center" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <ImageView
+                    android:id="@+id/contactImageView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_border_blue"
+                    android:src="@drawable/cars_172_1" />
+
+                <ImageView
+                    android:id="@+id/contactImageViewAdd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_border_blue"
+                    android:src="@drawable/cars_172_1" />
+
+                <ImageView
+                    android:id="@+id/contactImageViewAss"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_border_blue"
+                    android:src="@drawable/cars_172_1" />
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contactRingLabel" />
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/contact_ringtone_path"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:maxLines="1"
+                android:scrollHorizontally="true"
+                android:text="@+id/contact_ringtone_path" />
+
+            <Button
+                android:id="@+id/contact_button_ringtone"
+                style="@style/RectThemeButtonYellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/button_select_ringtone" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/contact_button_play"
+                style="@style/RectThemeButtonGreen"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_play_ringtone" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contactPhoneLabel" />
+        </TableRow>
+
+        <TableRow>
+
+            <Spinner
+                android:id="@+id/contactPhonesListSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/contactPhoneEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Spinner
+                android:id="@+id/contactPhoneTypeSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/contactEmailLabel" />
+        </TableRow>
+
+        <TableRow>
+
+            <Spinner
+                android:id="@+id/contactEmailsListSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow>
+
+            <EditText
+                android:id="@+id/contactEmailEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Spinner
+                android:id="@+id/contactEmailTypeSpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/contactSaveButton"
+                style="@style/RectThemeButtonYellow"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/save" />
+
+        </TableRow>
+    </TableLayout>
+
+</ScrollView>

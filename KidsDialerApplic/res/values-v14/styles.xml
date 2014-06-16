@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Spinner -->
+    
+    <style name="SpinnerStyle" parent="@android:style/Widget.Holo.Spinner">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/White</item>
+<!--     
+		android:spinnerStyle="@android:style/Widget.Spinner.DropDown"        
+ -->    
+    </style>
+ 
+    <style name="SpinnerItem">
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="SpinnerDropDownItem" parent="@android:style/Widget.DropDownItem">
+        <item name="android:textColor">@color/Azure</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    
+    
+</resources>

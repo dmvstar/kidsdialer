@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/custom_border_greeen"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/buttonClose"
+        style="@style/RectThemeButtonRed"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="closeActivity"
+        android:text="@string/buttonClose"
+        />
+
+    <ImageView
+        android:id="@+id/contactImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:background="@drawable/custom_border_blue"
+        android:contentDescription="@+id/contactImage"
+        android:onClick="getImagesIdentifiers"
+        android:src="@drawable/cars_172_5" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_border_yellow"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/contactEntryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:lines="2"
+            android:maxLines="2"
+            android:text="@+id/contactEntryText"
+            android:textColor="@color/color_light_gray"
+            android:textSize="28sp" />
+
+<!-- 
+        <TextView
+            android:id="@+id/contactPhoneText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@+id/contactPhoneText"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/menu_background"
+            android:textSize="24sp" />
+ -->
+ 
+        <Spinner
+            android:id="@+id/contactPhoneListSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/promptPhones" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/buttonCall"
+            style="@style/RectThemeButtonGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:drawableLeft="@drawable/button_call_72"
+            android:onClick="makeCall"
+            android:text="@string/contactCall" />
+
+        <Button
+            android:id="@+id/buttonSms"
+            style="@style/RectThemeButtonYellow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/button_sms_72"
+            android:onClick="makeSMS" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,187 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <style name="Transparent50">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+        <item name="android:windowBackground">@color/color_transparent_50</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:colorForeground">#fff</item>
+    </style>
+
+    <style name="CKButton" parent="android:style/Widget.Button">
+        <item name="android:windowBackground">@color/color_transparent_50</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_margin">0dip</item>
+        <item name="android:background">@color/RosyBrown</item>
+    </style>
+
+    <style name="DLButton" parent="android:style/Widget.Button">
+        <item name="android:windowBackground">@color/color_transparent_50</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">0dip</item>
+        <item name="android:background">@color/LightGreen</item>
+    </style>
+
+    <style name="RectThemeButtonGreen" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/hbutton_g</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="RectThemeButtonRed" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/hbutton_r</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="RectThemeButtonYellow" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/hbutton_y</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="CodeFontText" parent="@android:style/TextAppearance.Medium">
+<!--  		<item name="android:textColor">@color/LightYellow</item> -->
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="CodeFontEdit" parent="@android:style/TextAppearance.Medium">
+<!-- 		<item name="android:textColor">@color/LightGreen</item> -->
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="CodeDropDownItemText" 	parent="@android:style/TextAppearance.Widget.DropDownItem">
+        <item name="android:textColor">@color/LightGreen</item>
+    </style>    
+      
+    <style name="AquaEditTextStyle" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">@color/Aqua</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:background">@drawable/custom_border_blue</item>
+    </style>
+
+    <style name="AquaEditTextStyleLarge" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">@color/Aqua</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+    
+    
+    <style name="AquaTextStyle" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="AquaTextAppearance" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/BlueViolet</item>
+    </style>
+
+    <style name="AquaTextAppearanceButton" parent="@android:style/TextAppearance.Widget.Button">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="AquaRadioButtonStyle" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="AquaCheckBoxStyle" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:textColor">@color/AliceBlue</item>
+    </style>
+
+    <!-- Spinner -->
+
+    <style name="AquaSpinnerStyle" parent="@android:style/Widget.Spinner">
+        <item name="android:textColor">@color/AliceBlue</item>
+    </style>
+
+    <style name="AquaDropDownItem" parent="@android:style/TextAppearance.Widget.DropDownItem">
+        <item name="android:textColor">@color/AliceBlue</item>
+    </style>
+
+    <style name="SpinnerTextView" parent="@android:style/Widget.Spinner">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/White</item>
+    </style>
+    
+    <style name="SpinnerTextViewItem" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/Chocolate</item>
+    </style>
+
+    <style name="SpinnerTextViewItemCyan" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/Cyan</item>
+    </style>
+    
+    <style name="SpinnerDropDownViewItem" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/WhiteSmoke</item>
+    </style>
+     
+    <style name="SpinnerDropDownItem" parent="@android:style/Widget.DropDownItem">
+        <item name="android:textColor">@color/Teal</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+     
+    <style name="SpinnerStyle">
+        <item name="android:textColor">@color/Teal</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+    
+    <style name="SpinnerItemStyle" 		parent="@android:style/Widget.TextView.SpinnerItem">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/Cyan</item>
+    </style>    
+    
+
+
+   <!-- Green -->
+
+    <style name="CustomButtonStyle" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/custom_button_bg</item>
+        <item name="android:textColor">@color/themeText</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:padding">10dp</item>
+    </style>
+    
+    <style name="ButtonStyle" parent="@android:style/Widget.Button">
+        <item name="android:background">@drawable/button_bg</item>
+        <item name="android:textColor">@color/themeText</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:padding">15dp</item>
+    </style>
+
+    <style name="WindowTitleStyle">
+        <item name="android:singleLine">false</item>
+        <item name="android:textAppearance">@android:style/TextAppearance.WindowTitle</item>
+        <item name="android:shadowColor">#BBffffff</item>
+        <item name="android:shadowRadius">4</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/themeText</item>
+    </style>
+
+<!-- 
+    <style name="ListViewStyle" parent="@android:style/Widget.ListView">
+        <item name="android:listSelector">@drawable/list_selector_background</item>
+        <item name="android:cacheColorHint">?android:attr/colorBackgroundCacheHint</item>
+    </style>
+    <style name="SpinnerStyle" parent="@android:style/Widget.Spinner">
+        <item name="android:background">@drawable/btn_dropdown</item>
+    </style>
+ -->
+    <style name="TextViewStyle" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/themeText</item>
+    </style>
+
+    <style name="EditTextStyle" parent="@android:style/Widget.EditText">
+        <item name="android:background">@drawable/edit_text</item>
+    </style>
+
+
+</resources>

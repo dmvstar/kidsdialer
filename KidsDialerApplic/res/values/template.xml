@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="sms_template_key">
+        <item>Call me back !</item>
+        <item>Coming home</item>
+        <item>I`m busy, call you back</item>
+        <item>I went for a walk, call you back</item>
+    </string-array>
+
+</resources>

@@ -49,7 +49,7 @@
     <string name="button_send_sms">Send SMS</string>
     <string name="version_info">v.</string>
     <string name="hint_of_day">Happy New Year</string>
-    <string name="about_info">A simple application that allows the child as simply call minded contacts. Send short messages in an intuitive and colorful interface for a child.</string>
+    <string name="about_info">A simple Andriod application that allows a child to just make a call in the list of favorite contacts. Send short messages in an intuitive and colorful interface for a child.</string>
     <string name="button_cancel_sms">Cancel, go back</string>
     <string name="about_title">About...</string>
     <string name="about_author_info">Author(s)</string>

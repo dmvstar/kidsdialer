@@ -55,6 +55,16 @@
     <string name="button_edit_favorites">Сменить избранное</string>
     <string name="button_change_theme">Сменить тему приложения</string>
     <string name="button_change_pin">Сменить ПИН пароль</string>
+
+    <string name="hint_of_day">С новым Годом</string>
+
+    <string-array name="array_hint_of_day">
+        <item>Снежная зима ...</item>
+        <item>Теплая весна ...</item>
+        <item>Горячее лето ...</item>
+        <item>Золотая осень ...</item>
+    </string-array>
+
   		
 </resources>
 

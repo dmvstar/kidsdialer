@@ -218,7 +218,7 @@ public class ThemeManager {
 		return dafaultAttrStyleValue;
 	}
 
-	static Resources getDetachedResources(Context ctx) {
+	public static Resources getDetachedResources(Context ctx) {
 		final PackageManager pm = ctx.getPackageManager();
 		Resources res = null;
 		try {
@@ -339,5 +339,26 @@ public class ThemeManager {
 		}
 		return ret;
 	}
+	
+	public static int getColorResourcesForTheme(Context ctx,
+			String resName) throws NameNotFoundException {
+		int ret=0;
+		if (resName == null)
+			return ret;
+		
+		String pn = PreferenceManager.getThemePackage(ctx);
+		Resources tr = getDetachedResources(ctx);
+		int resId = -1;
+		
+		resId = tr.getIdentifier(resName, "color", pn );
+		
+		if(resId>0) {
+			ret = tr.getColor(resId);
+		}
+		
+		Log.v(LTAG, "["+pn+"]["+resName+"]["+Integer.toHexString(resId)+"]["+Integer.toHexString(ret)+"]");
+		
+		return ret;
+	}	
 
 }

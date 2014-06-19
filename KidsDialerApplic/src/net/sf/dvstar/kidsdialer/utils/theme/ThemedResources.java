@@ -52,6 +52,7 @@ public class ThemedResources {
 
 	public static final String BG_IMAGE_DESC = "window_bg";
 	public static final String BG_SCALE_DESC = "scaled_background";
+	public static final String LS_COLOR_DESC = "list_item_text";
 	public static final String IC_ITEMS_DESC = "cars_172_";
 	public static final int IC_ITEMS_CNT = 5;
 

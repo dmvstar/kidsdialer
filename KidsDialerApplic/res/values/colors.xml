@@ -170,5 +170,7 @@
 
     <color name="windowBackground">#ff58896B</color>
     <color name="themeText">#ff003312</color>
+    <color name="list_item_text">#1AAAE0</color>
 
+    
 </resources>

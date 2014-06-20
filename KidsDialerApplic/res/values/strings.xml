@@ -62,7 +62,9 @@
     <string name="button_change_pin">Change pin password</string>
 
     <string name="hint_of_day">Happy New Year</string>
-
+      
+    <string name="theme_title">Select application theme</string>
+    
     <string-array name="array_hint_of_day">
         <item>winter snowy ...</item>
         <item>warm spring ...</item>

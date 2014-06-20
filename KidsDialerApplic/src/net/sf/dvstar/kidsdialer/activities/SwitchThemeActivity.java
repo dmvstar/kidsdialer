@@ -62,6 +62,7 @@ public class SwitchThemeActivity extends ThemedListActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setTitle(R.string.theme_title);
 		mInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
 		List<ThemeDesc> themes = ThemeManager.getThemes(this,

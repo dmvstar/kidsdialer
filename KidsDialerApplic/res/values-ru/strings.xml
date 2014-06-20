@@ -56,6 +56,8 @@
     <string name="button_change_theme">Сменить тему приложения</string>
     <string name="button_change_pin">Сменить ПИН пароль</string>
 
+    <string name="theme_title">Сменить тему приложения</string>
+    
     <string name="hint_of_day">С новым Годом</string>
 
     <string-array name="array_hint_of_day">

@@ -31,6 +31,8 @@ import java.util.List;
 import net.sf.dvstar.kidsdialer.R;
 import net.sf.dvstar.kidsdialer.apps.ThemedActivity;
 import net.sf.dvstar.kidsdialer.utils.Commons;
+import net.sf.dvstar.kidsdialer.utils.Configs;
+import net.sf.dvstar.kidsdialer.utils.Configs.ConfigParams;
 import net.sf.dvstar.kidsdialer.utils.Log;
 import net.sf.dvstar.kidsdialer.utils.Utils;
 import android.app.Activity;
@@ -53,6 +55,8 @@ import android.widget.TextView;
 
 public class ConfigActivity extends ThemedActivity implements Commons {
 
+	private ConfigParams configParams;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 
@@ -64,43 +68,60 @@ public class ConfigActivity extends ThemedActivity implements Commons {
 		// +getResources().getString(R.string.button_change_theme)
 		// +")");
 
-//		getApplicationContext().setTheme(
-//				ThemesManagerHelper.getThemeResourceId());
+		// getApplicationContext().setTheme(
+		// ThemesManagerHelper.getThemeResourceId());
 
 		// getApplicationContext().getPackageName();
 
 		super.onCreate(savedInstanceState);
 
-//		LayoutInflater mLayoutInflater = LayoutInflater.from(this);
-//		
-//		if (ThemesManagerHelper.getThemeResourceId() > 0) {
-//
-//			Context mtContext = new ContextThemeWrapper(this,
-//					ThemesManagerHelper.getThemeResourceId());
-//			mLayoutInflater = LayoutInflater.from(mtContext);
-//
-//		}
+		// LayoutInflater mLayoutInflater = LayoutInflater.from(this);
+		//
+		// if (ThemesManagerHelper.getThemeResourceId() > 0) {
+		//
+		// Context mtContext = new ContextThemeWrapper(this,
+		// ThemesManagerHelper.getThemeResourceId());
+		// mLayoutInflater = LayoutInflater.from(mtContext);
+		//
+		// }
 
 		// View view = mLayoutInflater.inflate(R.layout.config, null);
 		// setContentView(view);
-
+		configParams = Configs.readResultForMain(this);
 		setContentView(R.layout.config);
 
 		Log.v("Activity State: onCreate()");
 	}
 
-
 	public void launchChangeFavorites(View v) {
 		PendingIntent pi;
-		Intent intent = new Intent(this, SettingsPassActivity.class);
-		// this.startActivityForResult(intent,
-		// Commons.REQUEST_FavoritesManagerActivity );
+		configParams = Configs.readResultForMain(this);
+		
+		if (firstStart()) {
+			Intent intent = new Intent(this, ChangePassActivity.class);
+			intent.putExtra(PARAM_NEWPINPASS, true);
+			pi = createPendingResult(REQUEST_ChanepasswordActivity, intent,
+					0);
+			intent.putExtra(PARAM_PINTENT, pi);
+			this.startActivityForResult(intent, REQUEST_ChanepasswordActivity);
+		} else {
+			Intent intent = new Intent(this, SettingsPassActivity.class);
+			// this.startActivityForResult(intent,
+			// Commons.REQUEST_FavoritesManagerActivity );
 
-		pi = createPendingResult(REQUEST_FavoritesManagerActivity, intent, 0);
+			pi = createPendingResult(REQUEST_FavoritesManagerActivity, intent,
+					0);
 
-		intent.putExtra(PARAM_PINTENT, pi);
+			intent.putExtra(PARAM_PINTENT, pi);
+			this.startActivity(intent);
+		}
+	}
 
-		this.startActivity(intent);
+	private boolean firstStart() {
+		boolean ret = true;
+		if (configParams.pinPass.length() > 0)
+			ret = false;
+		return ret;
 	}
 
 	public void launchChangeTheme(View v) {
@@ -108,7 +129,17 @@ public class ConfigActivity extends ThemedActivity implements Commons {
 	}
 
 	public void launchChangePassword(View v) {
-
+		PendingIntent pi;
+		Intent intent = new Intent(this, ChangePassActivity.class);
+		intent.putExtra(PARAM_NEWPINPASS, false);
+		pi = createPendingResult(REQUEST_ChanepasswordActivity, intent,
+				0);
+		intent.putExtra(PARAM_PINTENT, pi);
+		this.startActivityForResult(intent, REQUEST_ChanepasswordActivity);
+	}
+	
+	public void launchAbout(View v) {
+		this.startActivity(new Intent(this, AboutActivity.class));
 	}
 
 }

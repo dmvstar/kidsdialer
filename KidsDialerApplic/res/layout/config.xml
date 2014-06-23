@@ -35,11 +35,13 @@
         android:orientation="vertical" >
 
         <Button
-            android:id="@+id/switch_button"
+            android:id="@+id/button_config_about"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="2dp"
+            android:onClick="launchAbout"
             android:text="@string/action_about" />
+
     </LinearLayout>
     
 

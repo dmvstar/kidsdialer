@@ -71,6 +71,10 @@
         <item>hot summer ...</item>
         <item>autumn gold ...</item>
     </string-array>
+        <string name="form_pass_change">Change your pin:</string>
+        <string name="form_pass_old">Enter old pin:</string>
+        <string name="form_pass_new">Enter new pin:</string>
+        <string name="form_pass_button_change">Change</string>
 
 
 </resources>

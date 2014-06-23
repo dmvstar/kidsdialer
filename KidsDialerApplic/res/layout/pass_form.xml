@@ -5,14 +5,14 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/lbAboutTitle"
+        android:id="@+id/lb_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/form_pass_enter"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
-        android:id="@+id/edit_text_pin"
+        android:id="@+id/edt_old_pin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"

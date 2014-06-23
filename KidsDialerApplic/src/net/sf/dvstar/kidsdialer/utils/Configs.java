@@ -49,6 +49,7 @@ public class Configs {
 		        PreferenceManager.getDefaultSharedPreferences(context); 
 		ConfigParams cf = new ConfigParams();
 		cf.dataChanged = prefs.getBoolean(Commons.PARAM_DATACHANGED, false);
+		cf.pinPass = prefs.getString(Commons.PARAM_PINPASS, "");
 		return cf;
 	}
 	
@@ -59,7 +60,8 @@ public class Configs {
 	 * @param dataChanged 
 	 */
 	public static  void saveResultForMain(Context context, boolean dataChanged) {
-		ConfigParams cp = new ConfigParams(); cp.setDataChanged(dataChanged);
+		ConfigParams cp = readResultForMain(context);
+		cp.setDataChanged(dataChanged);
 		saveResultForMain(context, cp);
 	}
 		
@@ -69,12 +71,14 @@ public class Configs {
 		        PreferenceManager.getDefaultSharedPreferences(context); 
 		Editor editor = prefs.edit();
 		editor.putBoolean(Commons.PARAM_DATACHANGED, pConfigParams.dataChanged);
+		editor.putString(Commons.PARAM_PINPASS, pConfigParams.pinPass);
 		editor.commit();		
 	}
 	
 	
 	public static class ConfigParams {
 		public boolean dataChanged = false;
+		public String pinPass = "";
 		public void setDataChanged(boolean dataChanged) { this.dataChanged = dataChanged;}
 	}
 	

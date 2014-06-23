@@ -48,7 +48,7 @@ public class SettingsPassActivity extends Activity  implements OnClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.pass_form  );
 		checkPin = (Button) findViewById(R.id.button_check_pin);
-		textPin = (EditText) findViewById(R.id.edit_text_pin);
+		textPin = (EditText) findViewById(R.id.edt_old_pin);
 		checkPin.setOnClickListener(this);
 	}
 

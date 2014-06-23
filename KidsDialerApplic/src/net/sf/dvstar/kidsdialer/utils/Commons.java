@@ -33,7 +33,7 @@ public interface Commons {
 	public static final int REQUEST_ImageListActivity = 2;
 	public static final int REQUEST_FavoritesManagerActivity = 3;
 	public static final int REQUEST_ContactActivity = 4;
-		
+	public static final int REQUEST_ChanepasswordActivity = 5;	
 	
 	public final static String PARAM_PINTENT = "pendingIntent";	
 	public final static String PARAM_RESULT = "result";	
@@ -51,6 +51,8 @@ public interface Commons {
 	public final static int CONTACT_EDIT_MODE_ADD = 201;
 	
 	public final static String PARAM_DATACHANGED = "dataChanged";	
+	public final static String PARAM_PINPASS = "pinpass";	
+	public final static String PARAM_NEWPINPASS = "newpinpass";	
 	
 	public static final String TAG = "KidsDialer";
 	

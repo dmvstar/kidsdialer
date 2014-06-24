@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/lb_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/form_pass_change"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/lb_old_pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/form_pass_old"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/edt_old_pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberPassword" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/lb_new_pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/form_pass_new"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/edt_new_pin_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberPassword" />
+
+    <EditText
+        android:id="@+id/edt_new_pin_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberPassword" />
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/form_pass_show" />
+
+    <Button
+        android:id="@+id/button_check_pin"
+        style="@style/RectThemeButtonRed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/form_pass_button_change" />
+
+</LinearLayout>

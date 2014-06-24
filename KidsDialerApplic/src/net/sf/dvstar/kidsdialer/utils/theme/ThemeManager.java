@@ -42,8 +42,8 @@ import android.util.Log;
 
 public class ThemeManager {
 
-	public static final String LTAG="ThemeManager";
-	
+	public static final String LTAG = "ThemeManager";
+
 	private static ThemesConfiguration mThemesConfiguration = null;
 	private static int themeResourceId = 0;
 
@@ -158,7 +158,7 @@ public class ThemeManager {
 		String themePackage = PreferenceManager.getThemePackage(ctx);
 		return themePackage;
 	}
-	
+
 	static Resources.Theme getTheme(Context ctx, Resources.Theme superTheme) {
 		final PackageManager pm = ctx.getPackageManager();
 		Resources res = null;
@@ -233,6 +233,7 @@ public class ThemeManager {
 
 	/**
 	 * Get full name for themed resource
+	 * 
 	 * @param ctx
 	 * @param resName
 	 * @return
@@ -245,9 +246,9 @@ public class ThemeManager {
 			ret = resName;
 		else
 			ret = pn + ":drawable/" + resName;
-		
-		Log.v(LTAG,
-				"1 getDrawableResourceNameForTheme resName[" + resName + "][" + ret+ "]");
+
+		Log.v(LTAG, "1 getDrawableResourceNameForTheme resName[" + resName
+				+ "][" + ret + "]");
 		return ret;
 	}
 
@@ -258,24 +259,25 @@ public class ThemeManager {
 	 *            Application Context
 	 * @param resName
 	 *            Resource name like as im_item_01
-	 *            net.sf.dvstar.kidsdialer.theme.transformers:drawable/im_item_01
+	 *            net.sf.dvstar.kidsdialer.theme
+	 *            .transformers:drawable/im_item_01
 	 * @return resource id
 	 * @throws NameNotFoundException
 	 */
 	public static int getDrawableResourceIdForTheme(Context ctx, String resName)
-			//throws NameNotFoundException 
-		{
+	// throws NameNotFoundException
+	{
 		int ret = 0;
 		Resources res = getDetachedResources(ctx);
 		if (res != null) {
-			
+
 			ret = res.getIdentifier(
 					getDrawableResourceNameForTheme(ctx, resName), null, null);
-			
+
 			Log.v(LTAG,
-					"2 getDrawableResourceIdForTheme resName [0x" + Integer.toHexString(ret) +"][" + resName + "]["
-							+ getDrawableResourceNameForTheme(ctx, resName)
-							);
+					"2 getDrawableResourceIdForTheme resName [0x"
+							+ Integer.toHexString(ret) + "][" + resName + "]["
+							+ getDrawableResourceNameForTheme(ctx, resName));
 			// ret = res.getIdentifier(resName, "drawable", pn );
 			// Log.v("ThemeManager","getDrawableIdResourcesForTheme resName["+resName+"]["+
 			// getDrawableNameResourcesForTheme(ctx, resName) +"][0x"+
@@ -283,22 +285,24 @@ public class ThemeManager {
 		} else {
 			ret = 0;
 		}
-//			throw new NameNotFoundException("Not found "
-//					+ getDrawableResourceNameForTheme(ctx, resName) + " for "
-//					+ resName);
+		// throw new NameNotFoundException("Not found "
+		// + getDrawableResourceNameForTheme(ctx, resName) + " for "
+		// + resName);
 		return ret;
 	}
 
 	/**
 	 * Get resource name from path
-	 * @param resName full resource path 
+	 * 
+	 * @param resName
+	 *            full resource path
 	 * @return part of full resource path
 	 */
 	private static String getResourceNameFromPath(String resName) {
 		String ret = resName;
 		int index = 0;
-		if((index=resName.indexOf("drawable/"))>0){
-			index+=9;
+		if ((index = resName.indexOf("drawable/")) > 0) {
+			index += 9;
 			ret = resName.substring(index);
 		}
 		return ret;
@@ -306,6 +310,7 @@ public class ThemeManager {
 
 	/**
 	 * Get drawable themed resource
+	 * 
 	 * @param ctx
 	 * @param resName
 	 * @return
@@ -321,44 +326,59 @@ public class ThemeManager {
 		Resources res = getDetachedResources(ctx);
 		int id = getDrawableResourceIdForTheme(ctx, resName);
 		if (id > 0) {
-			Log.v("ThemeManager", "3 getDrawableResourcesForTheme resName[0x"+Integer.toHexString(id)+"][" + resName
-					+ "]\nt[" + pn + "]\ns["+ctx.getPackageName()+"]"+res);
+			Log.v("ThemeManager", "3 getDrawableResourcesForTheme resName[0x"
+					+ Integer.toHexString(id) + "][" + resName + "]\nt[" + pn
+					+ "]\ns[" + ctx.getPackageName() + "]" + res);
 			ret = res.getDrawable(id);
-		}	
-		else {
+		} else {
 			/**
 			 * try get resource from application
 			 */
 			res = ctx.getResources();
-			id = res.getIdentifier(ctx.getPackageName() + ":drawable/" + getResourceNameFromPath(resName),
-						null, null);
-			Log.v("ThemeManager", "3 getDrawableResourcesForTheme resName[0x"+Integer.toHexString(id)+"][" + getResourceNameFromPath(resName)
-					+ "]\nt[" + pn + "]\ns["+ctx.getPackageName()+"]"+res);
+			id = res.getIdentifier(ctx.getPackageName() + ":drawable/"
+					+ getResourceNameFromPath(resName), null, null);
+			Log.v("ThemeManager", "3 getDrawableResourcesForTheme resName[0x"
+					+ Integer.toHexString(id) + "]["
+					+ getResourceNameFromPath(resName) + "]\nt[" + pn + "]\ns["
+					+ ctx.getPackageName() + "]" + res);
 			if (id > 0)
 				ret = ctx.getResources().getDrawable(id);
 		}
 		return ret;
 	}
-	
-	public static int getColorResourcesForTheme(Context ctx,
-			String resName) throws NameNotFoundException {
-		int ret=0;
+
+	public static int getColorResourcesForTheme(Context ctx, String resName)
+			throws NameNotFoundException {
+		int ret = 0;
 		if (resName == null)
 			return ret;
-		
+
 		String pn = PreferenceManager.getThemePackage(ctx);
 		Resources tr = getDetachedResources(ctx);
 		int resId = -1;
-		
-		resId = tr.getIdentifier(resName, "color", pn );
-		
-		if(resId>0) {
-			ret = tr.getColor(resId);
+
+		if (tr != null) {
+			resId = tr.getIdentifier(resName, "color", pn);
+			if (resId > 0) {
+				ret = tr.getColor(resId);
+			}
+			if (resId > 0) {
+				ret = tr.getColor(resId);
+			}
+		} else {
+			pn=ctx.getPackageName();
+			resId = ctx.getResources().getIdentifier(resName, "color", pn);
+			if (resId > 0) {
+				ret = ctx.getResources().getColor(resId);
+			}
 		}
-		
-		Log.v(LTAG, "["+pn+"]["+resName+"]["+Integer.toHexString(resId)+"]["+Integer.toHexString(ret)+"]");
-		
+
+		Log.v(LTAG,
+				"[" + pn + "][" + resName + "]["
+						+ Integer.toHexString(resId) + "]["
+						+ Integer.toHexString(ret) + "]");
+
 		return ret;
-	}	
+	}
 
 }

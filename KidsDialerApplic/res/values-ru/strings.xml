@@ -67,6 +67,10 @@
         <item>Золотая осень ...</item>
     </string-array>
 
+    <string name="form_pass_change">Изменить pin пароль:</string>
+    <string name="form_pass_old">Введите старый pin:</string>
+    <string name="form_pass_new">Введите новый pin:</string>
+    <string name="form_pass_button_change">Изменить</string>
   		
 </resources>
 

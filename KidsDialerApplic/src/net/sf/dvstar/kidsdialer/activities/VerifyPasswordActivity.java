@@ -28,7 +28,9 @@ package net.sf.dvstar.kidsdialer.activities;
 
 import net.sf.dvstar.kidsdialer.R;
 import net.sf.dvstar.kidsdialer.utils.Commons;
+import net.sf.dvstar.kidsdialer.utils.Configs;
 import net.sf.dvstar.kidsdialer.utils.Log;
+import net.sf.dvstar.kidsdialer.utils.Configs.ConfigParams;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -36,11 +38,13 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
-public class SettingsPassActivity extends Activity  implements OnClickListener {
+public class VerifyPasswordActivity extends Activity  implements OnClickListener {
 
-	Button checkPin;	
-	EditText textPin;	
+	private Button checkPin;	
+	private EditText textPin;	
+	private ConfigParams configParams;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -67,7 +71,26 @@ public class SettingsPassActivity extends Activity  implements OnClickListener {
 	
 	@Override
 	public void onClick(View v) {
-		launchFavoritesManager();
+		if(passIsValid()) {
+			launchFavoritesManager();
+		} else {
+			this.finish();
+		}
+	}
+
+	private boolean passIsValid() {
+		boolean ret = false;
+		String savedPass, readPass;
+		configParams = Configs.readResultForMain(this);
+		savedPass = configParams.pinPass; 
+		readPass = textPin.getText().toString(); 
+		if(readPass.equals(savedPass)) ret= true;
+		else {
+			Toast.makeText(this,
+					"VerifyPasswordActivity onClick - Pin is Wrong ["+readPass+"]["+savedPass+"] !",
+					Toast.LENGTH_SHORT).show();
+		}
+		return ret;
 	}	
 	
 	

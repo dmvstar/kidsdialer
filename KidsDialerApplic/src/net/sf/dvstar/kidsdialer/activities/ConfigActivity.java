@@ -98,14 +98,14 @@ public class ConfigActivity extends ThemedActivity implements Commons {
 		configParams = Configs.readResultForMain(this);
 		
 		if (firstStart()) {
-			Intent intent = new Intent(this, ChangePassActivity.class);
+			Intent intent = new Intent(this, ChangePasswordActivity.class);
 			intent.putExtra(PARAM_NEWPINPASS, true);
 			pi = createPendingResult(REQUEST_ChanepasswordActivity, intent,
 					0);
 			intent.putExtra(PARAM_PINTENT, pi);
 			this.startActivityForResult(intent, REQUEST_ChanepasswordActivity);
 		} else {
-			Intent intent = new Intent(this, SettingsPassActivity.class);
+			Intent intent = new Intent(this, VerifyPasswordActivity.class);
 			// this.startActivityForResult(intent,
 			// Commons.REQUEST_FavoritesManagerActivity );
 
@@ -130,7 +130,7 @@ public class ConfigActivity extends ThemedActivity implements Commons {
 
 	public void launchChangePassword(View v) {
 		PendingIntent pi;
-		Intent intent = new Intent(this, ChangePassActivity.class);
+		Intent intent = new Intent(this, ChangePasswordActivity.class);
 		intent.putExtra(PARAM_NEWPINPASS, false);
 		pi = createPendingResult(REQUEST_ChanepasswordActivity, intent,
 				0);

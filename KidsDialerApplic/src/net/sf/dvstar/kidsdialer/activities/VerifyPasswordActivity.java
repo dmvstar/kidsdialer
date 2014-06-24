@@ -40,6 +40,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/**
+ * Verify password from saved
+ * @author dmvstar
+ */
 public class VerifyPasswordActivity extends Activity  implements OnClickListener {
 
 	private Button checkPin;	

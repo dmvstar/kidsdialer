@@ -28,6 +28,7 @@ package net.sf.dvstar.kidsdialer.utils;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 
 import net.sf.dvstar.kidsdialer.R;
 import android.app.Activity;
@@ -255,6 +256,32 @@ public class Utils implements Commons {
 	    drawable.draw(canvas);
 
 	    return bitmap;
+	}
+
+	public static int getSeasonId() {
+		int ret = 0;
+		
+		Date today = new Date();
+		switch ( today.getMonth() ) {
+			case 1: ret 	= 0;break;
+			case 2: ret 	= 0;break;
+		
+			case 3: ret 	= 1;break;
+			case 4: ret 	= 1;break;
+			case 5: ret 	= 1;break;
+			
+			case 6: ret 	= 2;break;
+			case 7: ret 	= 2;break;
+			case 8: ret 	= 2;break;
+			
+			case 9: ret 	= 3;break;
+			case 10: ret 	= 3;break;
+			case 11: ret 	= 3;break;
+			
+			case 12: ret 	= 0;break;
+		} 
+		
+		return ret;
 	}
 
 }

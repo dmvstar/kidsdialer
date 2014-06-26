@@ -137,8 +137,6 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/Cyan</item>
     </style>    
-    
-
 
    <!-- Green -->
 

@@ -28,6 +28,7 @@ package net.sf.dvstar.kidsdialer.activities;
 
 import net.sf.dvstar.kidsdialer.R;
 import net.sf.dvstar.kidsdialer.utils.Log;
+import net.sf.dvstar.kidsdialer.utils.Utils;
 import android.app.Activity;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager.NameNotFoundException;
@@ -49,11 +50,25 @@ public class AboutActivity extends Activity {
 			String version = pInfo.versionName;
 			TextView v = (TextView) findViewById(R.id.lbVersionNum);
 			v.setText(pInfo.versionName);
+			
+			v = (TextView) findViewById(R.id.lbHintOfDay);
+			v.setText(getSeasonTip());
+			
 		} catch (NameNotFoundException e) {
 			e.printStackTrace();
 		}
 		
 	}	
+	
+	private String getSeasonTip(){
+		String ret = getResources().getString(R.string.hint_of_day);
+		
+		String[] seasonTips = getResources().getStringArray(R.array.array_hint_of_day);
+		
+		ret = seasonTips[Utils.getSeasonId()];
+		
+		return ret;
+	}
 	
 	public void makeDonate(View v) {
 		

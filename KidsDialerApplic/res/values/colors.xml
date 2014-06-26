@@ -169,8 +169,9 @@
     <color name="DarkGray_50">#7FA9A9A9</color>
 
     <color name="windowBackground">#ff58896B</color>
-    <color name="themeText">#ff003312</color>
+    <color name="themeText">#47ffe4</color>
     <color name="list_item_text">#1AAAE0</color>
+    <color name="text_item_text">#1AAAE0</color>
 
     
 </resources>

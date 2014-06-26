@@ -27,6 +27,7 @@
 package net.sf.dvstar.kidsdialer.activities;
 
 import net.sf.dvstar.kidsdialer.R;
+import net.sf.dvstar.kidsdialer.apps.ThemedActivity;
 import net.sf.dvstar.kidsdialer.utils.Commons;
 import net.sf.dvstar.kidsdialer.utils.Configs;
 import net.sf.dvstar.kidsdialer.utils.Log;
@@ -44,7 +45,7 @@ import android.widget.Toast;
  * Verify password from saved
  * @author dmvstar
  */
-public class VerifyPasswordActivity extends Activity  implements OnClickListener {
+public class VerifyPasswordActivity extends ThemedActivity  implements OnClickListener {
 
 	private Button checkPin;	
 	private EditText textPin;	

@@ -27,11 +27,14 @@
 package net.sf.dvstar.kidsdialer.activities;
 
 import net.sf.dvstar.kidsdialer.R;
+import net.sf.dvstar.kidsdialer.apps.ThemedActivity;
 import net.sf.dvstar.kidsdialer.utils.Commons;
 import net.sf.dvstar.kidsdialer.utils.Configs;
 import net.sf.dvstar.kidsdialer.utils.Configs.ConfigParams;
 import net.sf.dvstar.kidsdialer.utils.Log;
 import android.app.Activity;
+import android.content.res.Resources.Theme;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -44,7 +47,7 @@ import android.widget.Toast;
  * @author dmvstar
  *
  */
-public class ChangePasswordActivity extends Activity  implements OnClickListener {
+public class ChangePasswordActivity extends ThemedActivity  implements OnClickListener {
 
 	private Button changePin;
 	private EditText textOldPin;
@@ -67,13 +70,13 @@ public class ChangePasswordActivity extends Activity  implements OnClickListener
 		changePin = (Button)  findViewById(R.id.button_check_pin);
 		
 		changePin.setOnClickListener(this);
-   
 
         if(bundle.getBoolean(Commons.PARAM_NEWPINPASS,false)==true)
         {
         	textOldPin.setEnabled(false);
         	newPinPass = true;
         }
+        
 	}
 	
 	@Override
